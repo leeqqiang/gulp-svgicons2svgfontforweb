@@ -1,0 +1,64 @@
+{
+  "name": "gulp-svgicons2svgfontforweb",
+  "version": "0.1.0",
+  "description": "Create a SVG font from several SVG icons",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha tests/*.mocha.js",
+    "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- tests/*.mocha.js -R spec -t 5000 && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+    "cover": "istanbul cover ./node_modules/mocha/bin/_mocha --report html -- tests/*.mocha.js -R spec -t 5000"
+  },
+  "keywords": [
+    "gulpplugin",
+    "gulp",
+    "svg",
+    "icon",
+    "font"
+  ],
+  "homepage": "https://github.com/leeqqiang/gulp-svgicons2svgfontforweb",
+  "author": {
+    "name": "Nicolas Froidure",
+    "url": "http://www.insertafter.com/blog.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:leeqqiang/gulp-svgicons2svgfontforweb.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leeqqiang/gulp-svgicons2svgfontforweb/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.githubusercontent.com/leeqqiang/gulp-svgicons2svgfontforweb/master/LICENSE"
+    }
+  ],
+  "dependencies": {
+    "gulp-util": "~2.2.19",
+    "svgicons2svgfontforweb": "0.1.1",
+    "readable-stream": "^1.0.27-1"
+  },
+  "devDependencies": {
+    "mocha": "~1.20.1",
+    "event-stream": "~3.1.5",
+    "mocha-lcov-reporter": "0.0.1",
+    "coveralls": "~2.10.1",
+    "istanbul": "~0.2.13",
+    "gulp": "~3.8.5",
+    "rimraf": "2.2.8",
+    "svgicons2svgfontforweb": "0.1.1",
+    "gulp-util": "~2.2.19"
+  },
+  "maintainers": [
+    {
+      "name": "nfroidure",
+      "email": "nfroidure@elitwork.com"
+    },
+    {
+      "name": "leeqqiang",
+      "url": "https://github.com/leeqqiang"
+    }
+  ],
+  "directories": {},
+  "readme": "based on gulp-svgicons2svgfont"
+}
