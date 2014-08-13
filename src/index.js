@@ -1,4 +1,4 @@
-var svgicons2svgfont = require('svgicons2svgfont')
+var svgicons2svgfont = require('svgicons2svgfontforweb')
   , gutil = require('gulp-util')
   , Stream = require('readable-stream')
   , Fs = require('fs')
@@ -15,18 +15,18 @@ module.exports = function(options) {
   options.ignoreExt = options.ignoreExt || false;
 
   if(!options.fontName) {
-    throw new gutil.PluginError('svgicons2svgfont', 'Missing options.fontName');
+    throw new gutil.PluginError('svgicons2svgfontforweb', 'Missing options.fontName');
   }
 
   options.log = options.log || function() {
-    gutil.log.apply(gutil, ['gulp-svgicons2svgfont: '].concat(
+    gutil.log.apply(gutil, ['gulp-svgicons2svgfontforweb: '].concat(
       [].slice.call(arguments, 0).concat()));
   };
 
   var stream = new Stream.Transform({objectMode: true});
 
   options.error = options.error || function() {
-    stream.emit('error', new PluginError('svgicons2svgfont',
+    stream.emit('error', new PluginError('svgicons2svgfontforweb',
       [].slice.call(arguments, 0).concat()));
   };
 
